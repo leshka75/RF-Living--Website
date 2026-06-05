@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RF Living — Sarasota Vacation Rentals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="logo">RF <span>Living</span></a>
+  <ul class="nav-links">
+    <li><a href="#properties">Properties</a></li>
+    <li><a href="#amenities">Amenities</a></li>
+    <li><a href="#sarasota">Sarasota</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Book Now</a>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#properties" onclick="closeMenu()">Properties</a>
+  <a href="#amenities" onclick="closeMenu()">Amenities</a>
+  <a href="#sarasota" onclick="closeMenu()">Sarasota</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="#contact" class="nav-cta" onclick="closeMenu()">Book Now</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-waves">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60 L1440,120 L0,120 Z" fill="rgba(255,255,255,0.08)"/></svg>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">✦ Sarasota, Florida</div>
+    <h1>Your Perfect<br><em>Gulf Coast</em> Escape</h1>
+    <p>Handpicked vacation homes steps from Siesta Key's sugar-white sand. Sun, surf, and unforgettable memories await.</p>
+    <div class="hero-btns">
+      <a href="#properties" class="btn-primary">Browse Properties</a>
+      <a href="#contact" class="btn-ghost">Plan Your Stay</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-val">50+</div><div class="stat-lbl">Properties</div></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><div class="stat-val">5★</div><div class="stat-lbl">Avg. Rating</div></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><div class="stat-val">2,000+</div><div class="stat-lbl">Happy Guests</div></div>
+  </div>
+</section>
+
+<!-- SEARCH BAR -->
+<section class="search-bar-section">
+  <div class="search-bar">
+    <div class="search-field">
+      <label>Location</label>
+      <select>
+        <option>All Sarasota</option>
+        <option>Siesta Key</option>
+        <option>Lido Key</option>
+        <option>Downtown Sarasota</option>
+        <option>Longboat Key</option>
+      </select>
+    </div>
+    <div class="search-divider"></div>
+    <div class="search-field">
+      <label>Check In</label>
+      <input type="date">
+    </div>
+    <div class="search-divider"></div>
+    <div class="search-field">
+      <label>Check Out</label>
+      <input type="date">
+    </div>
+    <div class="search-divider"></div>
+    <div class="search-field">
+      <label>Guests</label>
+      <select>
+        <option>1–2 guests</option>
+        <option>3–4 guests</option>
+        <option>5–6 guests</option>
+        <option>7+ guests</option>
+      </select>
+    </div>
+    <button class="search-btn">Search</button>
+  </div>
+</section>
+
+<!-- PROPERTIES -->
+<section class="properties" id="properties">
+  <div class="section-header">
+    <div class="section-eyebrow">Featured Rentals</div>
+    <h2>Find Your <em>Dream Stay</em></h2>
+    <p>From cozy beachside cottages to sprawling Gulf-front estates — every RF Living property is curated for comfort.</p>
+  </div>
+  <div class="properties-grid">
+
+    <div class="property-card">
+      <div class="property-img" style="background: linear-gradient(135deg, #48CAE4 0%, #0096C7 50%, #023E8A 100%);">
+        <div class="property-img-overlay">
+          <div class="property-badge">Beachfront</div>
+        </div>
+        <div class="property-scene">
+          <div class="scene-sun"></div>
+          <div class="scene-water"></div>
+          <div class="scene-palm"></div>
+        </div>
+      </div>
+      <div class="property-info">
+        <div class="property-location">📍 Siesta Key</div>
+        <h3>Siesta Sands Villa</h3>
+        <p>Direct Gulf access, private pool, and panoramic sunset views from every room.</p>
+        <div class="property-details">
+          <span>🛏 4 beds</span>
+          <span>🚿 3 baths</span>
+          <span>👥 8 guests</span>
+        </div>
+        <div class="property-footer">
+          <div class="property-price"><span class="price-amt">$425</span><span class="price-unit">/night</span></div>
+          <a href="#contact" class="btn-card">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="property-card featured">
+      <div class="property-img" style="background: linear-gradient(135deg, #F4A261 0%, #E76F51 40%, #E9C46A 100%);">
+        <div class="property-img-overlay">
+          <div class="property-badge best">Best Value</div>
+        </div>
+        <div class="property-scene sunset">
+          <div class="scene-sun sunset-sun"></div>
+          <div class="scene-water sunset-water"></div>
+          <div class="scene-palm right-palm"></div>
+        </div>
+      </div>
+      <div class="property-info">
+        <div class="property-location">📍 Lido Key</div>
+        <h3>The Coral Cottage</h3>
+        <p>Charming 2-bedroom retreat with lush tropical garden, steps to the beach and St. Armands Circle.</p>
+        <div class="property-details">
+          <span>🛏 2 beds</span>
+          <span>🚿 2 baths</span>
+          <span>👥 4 guests</span>
+        </div>
+        <div class="property-footer">
+          <div class="property-price"><span class="price-amt">$225</span><span class="price-unit">/night</span></div>
+          <a href="#contact" class="btn-card">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="property-card">
+      <div class="property-img" style="background: linear-gradient(135deg, #52B788 0%, #40916C 50%, #1B4332 100%);">
+        <div class="property-img-overlay">
+          <div class="property-badge">Waterfront</div>
+        </div>
+        <div class="property-scene tropical">
+          <div class="scene-sun tropic-sun"></div>
+          <div class="scene-water tropic-water"></div>
+          <div class="scene-palm tropic-palm"></div>
+        </div>
+      </div>
+      <div class="property-info">
+        <div class="property-location">📍 Longboat Key</div>
+        <h3>Longboat Manor</h3>
+        <p>Elegant waterfront estate with boat dock, gourmet kitchen, and private beach access.</p>
+        <div class="property-details">
+          <span>🛏 5 beds</span>
+          <span>🚿 4 baths</span>
+          <span>👥 10 guests</span>
+        </div>
+        <div class="property-footer">
+          <div class="property-price"><span class="price-amt">$650</span><span class="price-unit">/night</span></div>
+          <a href="#contact" class="btn-card">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="properties-cta">
+    <a href="#contact" class="btn-outline">View All Properties →</a>
+  </div>
+</section>
+
+<!-- AMENITIES -->
+<section class="amenities" id="amenities">
+  <div class="amenities-bg"></div>
+  <div class="amenities-content">
+    <div class="section-header light">
+      <div class="section-eyebrow">Why RF Living</div>
+      <h2>Everything You <em>Need</em></h2>
+      <p>Every property is fully equipped so you can arrive, unwind, and start making memories.</p>
+    </div>
+    <div class="amenities-grid">
+      <div class="amenity-card">
+        <div class="amenity-icon">🏖️</div>
+        <h4>Beach Access</h4>
+        <p>Steps to Sarasota's world-famous white sand beaches and crystal Gulf waters.</p>
+      </div>
+      <div class="amenity-card">
+        <div class="amenity-icon">🏊</div>
+        <h4>Private Pools</h4>
+        <p>Most properties feature heated private pools perfect for year-round relaxation.</p>
+      </div>
+      <div class="amenity-card">
+        <div class="amenity-icon">🚤</div>
+        <h4>Boat & Kayak Access</h4>
+        <p>Select properties include boat docks, kayaks, and paddleboards for water adventures.</p>
+      </div>
+      <div class="amenity-card">
+        <div class="amenity-icon">🍳</div>
+        <h4>Gourmet Kitchens</h4>
+        <p>Fully stocked, chef-quality kitchens for cooking fresh Florida seafood at home.</p>
+      </div>
+      <div class="amenity-card">
+        <div class="amenity-icon">📶</div>
+        <h4>High-Speed WiFi</h4>
+        <p>Fast, reliable internet throughout — great for remote work or streaming sunsets.</p>
+      </div>
+      <div class="amenity-card">
+        <div class="amenity-icon">🛎️</div>
+        <h4>Concierge Service</h4>
+        <p>Local recommendations, restaurant reservations, and 24/7 guest support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SARASOTA -->
+<section class="sarasota" id="sarasota">
+  <div class="sarasota-inner">
+    <div class="sarasota-text">
+      <div class="section-eyebrow">The Destination</div>
+      <h2>Why <em>Sarasota?</em></h2>
+      <p>Consistently ranked among Florida's most beautiful destinations, Sarasota blends natural wonder with vibrant culture.</p>
+      <ul class="sarasota-list">
+        <li>🌅 Siesta Key — #1 beach in the USA (TripAdvisor)</li>
+        <li>🎭 World-class arts, theatre & dining scene</li>
+        <li>🐬 Dolphin tours, shelling & eco-adventures</li>
+        <li>🛍️ St. Armands Circle boutiques & cafés</li>
+        <li>☀️ 255+ days of sunshine per year</li>
+        <li>🦩 Myakka River State Park & nature escapes</li>
+      </ul>
+      <a href="#contact" class="btn-primary">Plan Your Trip</a>
+    </div>
+    <div class="sarasota-visual">
+      <div class="visual-card main-visual">
+        <div class="visual-scene">
+          <div class="vs-sky"></div>
+          <div class="vs-sun"></div>
+          <div class="vs-water"></div>
+          <div class="vs-sand"></div>
+          <div class="vs-palm-l"></div>
+          <div class="vs-palm-r"></div>
+          <div class="vs-birds">
+            <div class="bird"></div>
+            <div class="bird"></div>
+            <div class="bird"></div>
+          </div>
+        </div>
+        <div class="visual-label">Siesta Key Beach</div>
+      </div>
+      <div class="visual-stat-cards">
+        <div class="vstat">
+          <div class="vstat-num">365</div>
+          <div class="vstat-lbl">Days of Paradise</div>
+        </div>
+        <div class="vstat">
+          <div class="vstat-num">#1</div>
+          <div class="vstat-lbl">Beach in the US</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="section-header">
+    <div class="section-eyebrow">Guest Reviews</div>
+    <h2>Loved by <em>Every Guest</em></h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>"Absolutely stunning property. The sunsets from the deck were unlike anything we'd ever seen. RF Living made everything seamless — we'll be back every year!"</p>
+      <div class="testimonial-author">— Sarah M., Chicago</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>"The Coral Cottage was perfect for our anniversary trip. Steps from the beach, beautifully decorated, and the concierge team got us a last-minute dinner reservation at an incredible spot."</p>
+      <div class="testimonial-author">— James & Priya K., Atlanta</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>"We bring the whole family every Thanksgiving. RF Living's homes are the only ones that fit everyone comfortably — and the pools are incredible for the kids."</p>
+      <div class="testimonial-author">— The Hernandez Family, Dallas</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / BOOKING CTA -->
+<section class="contact-cta" id="contact">
+  <div class="contact-bg"></div>
+  <div class="contact-content">
+    <div class="section-eyebrow light">Get In Touch</div>
+    <h2>Ready to Book Your <em>Getaway?</em></h2>
+    <p>Reach out and our team will help you find the perfect RF Living property for your Sarasota escape.</p>
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email Address" required>
+      </div>
+      <div class="form-row">
+        <input type="tel" placeholder="Phone Number">
+        <select>
+          <option value="" disabled selected>Number of Guests</option>
+          <option>1–2 guests</option>
+          <option>3–4 guests</option>
+          <option>5–6 guests</option>
+          <option>7+ guests</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <input type="date" placeholder="Check In">
+        <input type="date" placeholder="Check Out">
+      </div>
+      <textarea placeholder="Tell us about your ideal stay — any specific areas, amenities, or special requests?" rows="4"></textarea>
+      <button type="submit" class="btn-primary full-width">Send Inquiry →</button>
+    </form>
+    <div class="contact-direct">
+      <a href="tel:+19415550100">📞 (941) 555-0100</a>
+      <a href="mailto:hello@rfliving.com">✉️ hello@rfliving.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">RF <span>Living</span></div>
+      <p>Sarasota's premier vacation rental experience. Sun, sand, and stays you'll never forget.</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="Instagram">📸</a>
+        <a href="#" aria-label="Facebook">👍</a>
+        <a href="#" aria-label="TikTok">🎵</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h5>Explore</h5>
+      <a href="#properties">All Properties</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#sarasota">About Sarasota</a>
+    </div>
+    <div class="footer-links">
+      <h5>Company</h5>
+      <a href="#">About Us</a>
+      <a href="#">List Your Property</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-links">
+      <h5>Locations</h5>
+      <a href="#">Siesta Key</a>
+      <a href="#">Lido Key</a>
+      <a href="#">Longboat Key</a>
+      <a href="#">Downtown Sarasota</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 RF Living LLC · Sarasota, FL</span>
+    <span><a href="#">Privacy Policy</a> · <a href="#">Terms</a></span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
