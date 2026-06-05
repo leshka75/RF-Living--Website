@@ -1,0 +1,7 @@
+# Claude Code — track project settings but not personal/local overrides
+.claude/
+!.claude/settings.json
+
+# OS files
+.DS_Store
+Thumbs.db

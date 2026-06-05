@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "{ read -r line; if echo \"$line\" | grep -qE '\"command\"\\s*:\\s*\"[^\"]*git push[^\"]*main[^\"]*\"'; then echo '{\"continue\":false,\"stopReason\":\"Direct push to main is blocked. Workflow: in-dev -> preview -> main (only when explicitly approved by user).\"}'; else echo '{\"continue\":true}'; fi; }",
+            "statusMessage": "Checking branch push rules..."
+          }
+        ]
+      }
+    ]
+  }
+}
